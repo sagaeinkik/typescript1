@@ -1,0 +1,166 @@
+@use 'base' as b;
+body {
+    background-color: b.$lightgrey;
+    position: relative;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: b.$darkgrey;
+    width: 85%;
+    margin: auto;
+    border-radius: 40px;
+    margin: 8em auto;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    .icon {
+        background-color: b.$darkgrey;
+        border-radius: 50%;
+        padding: 0.3em;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+        max-width: 150px;
+        min-width: 100px;
+        max-height: 150px;
+        min-height: 100px;
+        position: absolute;
+        top: -5em;
+        left: -5em;
+
+        img {
+            width: 100%;
+            max-height: 150px;
+            min-height: 100px;
+            max-width: 150px;
+            min-width: 100px;
+        }
+    }
+    p.heading {
+        @include b.headline;
+
+        &.addcourse {
+            color: white;
+        }
+    }
+}
+
+#leftside .content {
+    @include b.content;
+
+    form {
+        width: 90%;
+        margin: auto;
+        label {
+            color: b.$lightgrey;
+        }
+
+        input:not(input.btn) {
+            @include b.gradient;
+            font-family: b.$bread;
+            font-size: 1em;
+            display: block;
+            margin-bottom: 2.5em;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0);
+            border: none;
+            border-bottom: 1px solid b.$lightgrey;
+            padding: 1em 1em 0.4em 0;
+            position: relative;
+        }
+
+        input:focus {
+            outline: none;
+            caret-color: b.$green;
+        }
+
+        input.btn {
+            font-family: b.$bread;
+            width: 100%;
+            display: block;
+            margin-bottom: 0.8em;
+            margin-top: 1.5em;
+            padding: 0.8em;
+            font-size: 0.9em;
+            border: none;
+            cursor: pointer;
+            @include b.transition;
+
+            &:first-child {
+                color: black;
+                margin-top: 5em;
+            }
+            &:last-child {
+                background-color: b.$midgrey;
+                color: white;
+            }
+            &:hover {
+                background-image: linear-gradient(90deg, b.$green, b.$orange);
+                color: black;
+            }
+        }
+    }
+}
+
+#rightside {
+    background-color: white;
+    border-radius: 0 40px 40px 0;
+
+    .content {
+        @include b.content;
+
+        .courselist {
+            height: 600px;
+            max-height: 50vh;
+            overflow-y: scroll;
+        }
+    }
+    .course {
+        margin-bottom: 1em;
+        a {
+            color: black;
+            text-decoration: dotted underline;
+            @include b.transition;
+
+            &:hover {
+                color: darken(b.$green, 40%);
+            }
+        }
+
+        .controls {
+            margin: 0.5em 0;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+
+            button {
+                font-family: b.$bread;
+                font-size: 0.9em;
+                background: white;
+                color: b.$lightgrey;
+                border: none;
+                cursor: pointer;
+                @include b.transition;
+
+                &:hover {
+                    color: black;
+                }
+            }
+        }
+        span.divider {
+            display: block;
+            width: 100%;
+            border-top: 1px solid b.$lightgrey;
+        }
+    }
+}
+p.credits {
+    font-family: 'DM Mono', 'Courier New', Courier, monotype;
+    font-size: 0.8em;
+    color: #727272;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}

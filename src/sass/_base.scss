@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono&family=Poppins:ital,wght@0,100;0,400;0,600;0,700;1,100&display=swap');
+
+//färger
+$lightgrey: #a5a5a5;
+$midgrey: #484848;
+$darkgrey: #303030;
+$accentgrey: #ececec;
+
+$green: #d1e5a6;
+$orange: #f8d890;
+
+//Typsnitt
+$bread: Poppins, Arial, Helvetica, sans-serif;
+
+//Mixins
+
+@mixin gradient {
+    background: -webkit-linear-gradient(0deg, $green 0%, $orange 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+@mixin headline {
+    font-size: 4.6em;
+    font-weight: 600;
+    margin-bottom: 0.5em;
+}
+
+@mixin inputtext {
+    font-family: 100;
+}
+
+@mixin buttons {
+    border: none;
+    background-color: white;
+    font-size: 0.7em;
+}
+
+@mixin content {
+    width: 70%;
+    margin: 6em auto;
+    min-height: 60vh;
+}
+
+/* Mixin för att centrera saker  */
+@mixin center($horizontal, $vertical) {
+    @if $horizontal and $vertical {
+        position: relative;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    } @else if $vertical {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    } @else if $horizontal {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/* Mixin för transition med vendor prefixes (jag tror inte man behöver det, men är osäker, så de får vara med ändå) */
+@mixin transition {
+    transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+}

@@ -1,0 +1,20 @@
+@use 'base';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    overflow-x: hidden;
+}
+
+body {
+    @extend .wrapper;
+    max-width: 2400px;
+    width: 100%;
+    line-height: 1.9;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    margin: auto;
+}
