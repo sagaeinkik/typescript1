@@ -209,6 +209,10 @@ function printCourses(): void {
                 // Uppdatera storage och ta bort diven från DOM
                 localStorage.setItem('courses', JSON.stringify(courses));
                 courseDiv.remove();
+
+                if (courses.length < 1) {
+                    courseList.innerHTML = '<p>Det finns inga kurser att visa ännu...</p>';
+                }
             });
 
             //Peta in knappar i div.controls, peta in div.controls i DOM
@@ -267,7 +271,7 @@ function updateCourse(): void {
     // Återställ redigeringsindex
     editingCourseIndex = null;
     //Ändra knapp
-    submitBtn.innerHTML = 'Lägg till kurs';
+    submitBtn.value = 'Lägg till kurs';
 }
 
 // Återställ fälten i formuläret
