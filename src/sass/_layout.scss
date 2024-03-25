@@ -4,7 +4,9 @@ body {
     position: relative;
 }
 
+//Stora rutan
 .container {
+    //Gör till grid, lägg halvorna bredvid varandra
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-color: b.$darkgrey;
@@ -14,6 +16,7 @@ body {
     margin: 8em auto;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
     position: relative;
+    //Placera ikonen
     .icon {
         background-color: b.$darkgrey;
         border-radius: 50%;
@@ -35,19 +38,22 @@ body {
             min-width: 100px;
         }
     }
+    //Styla "rubrikerna"
     p.heading {
         @include b.headline;
-
+        /* Speciell regel för kurs */
         &.addcourse {
             color: white;
         }
     }
 }
 
+//Vänstra halvan
 #leftside .content {
     @include b.content;
     width: 65%;
 
+    //Regler för labels och input
     form {
         label {
             color: b.$lightgrey;
@@ -61,7 +67,7 @@ body {
             @include b.gradient;
             @include b.inputrules;
         }
-
+        /* Elakt av mig: */
         input:focus {
             outline: none;
             caret-color: b.$green;
@@ -80,6 +86,7 @@ body {
             @include b.transition;
 
             &:first-child {
+                //Flytta ner första knappen
                 color: black;
                 margin-top: 8em;
             }
@@ -95,6 +102,7 @@ body {
     }
 }
 
+/* Högersidan */
 #rightside {
     background-color: white;
     border-radius: 0 40px 40px 0;
@@ -103,10 +111,12 @@ body {
         @include b.content;
 
         .courselist {
+            /* Avgör hur hög listan är och sätter scroll */
             height: 720px;
             overflow-y: scroll;
         }
     }
+    /* Styla själva kurserna */
     .course {
         margin-bottom: 1em;
         a {
@@ -120,6 +130,7 @@ body {
         }
 
         .controls {
+            /* Sätt knapparna på varsin ände */
             margin: 0.5em 0;
             display: flex;
             width: 100%;
@@ -146,6 +157,8 @@ body {
         }
     }
 }
+
+/* Vem som gjort sidan */
 p.credits {
     font-family: 'DM Mono', 'Courier New', Courier, monotype;
     font-size: 0.8em;

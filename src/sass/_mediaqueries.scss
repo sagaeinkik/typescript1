@@ -1,10 +1,13 @@
-// Media queries
+/* MEDIA QUERIES */
+
+//Justera "rubrik"
 @media (max-width: 1500px) {
     .container p.heading {
         font-size: 3em;
     }
 }
 
+//Justera ikonens position, ändra textstorlek, anpassa avstånd
 @media (max-width: 1100px) {
     .container .icon {
         left: 50%;
@@ -23,11 +26,12 @@
         width: 80%;
 
         .courselist {
-            max-height: 700px;
+            max-height: 600px;
         }
     }
 }
 
+//Placera ovanpå varandra, ändra border-radiusen
 @media (max-width: 750px) {
     .container {
         display: flex;
@@ -41,6 +45,7 @@
     }
 }
 
+//Bredda allt som går att bredda, minska text osv
 @media (max-width: 450px) {
     .container {
         width: 95%;

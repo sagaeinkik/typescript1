@@ -1,15 +1,18 @@
 @use 'base';
 
+// Bort med padding och margin
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+//Se till att inget sticker ut åt sidorna
 .wrapper {
     overflow-x: hidden;
 }
 
+//Vanliga regler för body
 body {
     @extend .wrapper;
     max-width: 2400px;

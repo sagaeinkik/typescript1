@@ -14,33 +14,35 @@ $bread: Poppins, Arial, Helvetica, sans-serif;
 
 //Mixins
 
+//Text-gradient
 @mixin gradient {
     background: -webkit-linear-gradient(0deg, $green 0%, $orange 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+//Styla som rubriker
 @mixin headline {
     font-size: 4.6em;
     font-weight: 600;
     margin-bottom: 0.5em;
 }
 
-@mixin inputtext {
-    font-family: 100;
-}
-
+//Ändra-knapparna
 @mixin buttons {
     border: none;
     background-color: white;
     font-size: 0.7em;
 }
 
+//Vänster- och högersidans innehåll
 @mixin content {
     width: 70%;
     margin: 6em auto;
     min-height: 60vh;
 }
 
+//Styling för input
 @mixin inputrules {
     font-family: $bread;
     font-size: 1em;
