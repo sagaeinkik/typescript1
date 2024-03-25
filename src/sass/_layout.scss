@@ -46,26 +46,20 @@ body {
 
 #leftside .content {
     @include b.content;
+    width: 65%;
 
     form {
-        width: 90%;
-        margin: auto;
         label {
             color: b.$lightgrey;
         }
 
+        span.error {
+            color: rgb(219, 26, 26);
+            margin-left: 0.5em;
+        }
         input:not(input.btn) {
             @include b.gradient;
-            font-family: b.$bread;
-            font-size: 1em;
-            display: block;
-            margin-bottom: 2.5em;
-            width: 100%;
-            background-color: rgba(0, 0, 0, 0);
-            border: none;
-            border-bottom: 1px solid b.$lightgrey;
-            padding: 1em 1em 0.4em 0;
-            position: relative;
+            @include b.inputrules;
         }
 
         input:focus {
@@ -87,7 +81,7 @@ body {
 
             &:first-child {
                 color: black;
-                margin-top: 5em;
+                margin-top: 8em;
             }
             &:last-child {
                 background-color: b.$midgrey;
@@ -109,8 +103,7 @@ body {
         @include b.content;
 
         .courselist {
-            height: 600px;
-            max-height: 50vh;
+            height: 720px;
             overflow-y: scroll;
         }
     }

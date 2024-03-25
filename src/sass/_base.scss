@@ -41,6 +41,19 @@ $bread: Poppins, Arial, Helvetica, sans-serif;
     min-height: 60vh;
 }
 
+@mixin inputrules {
+    font-family: $bread;
+    font-size: 1em;
+    display: block;
+    margin-bottom: 2.5em;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    border-bottom: 1px solid $lightgrey;
+    padding: 1em 1em 0.4em 0;
+    position: relative;
+}
+
 /* Mixin för att centrera saker  */
 @mixin center($horizontal, $vertical) {
     @if $horizontal and $vertical {

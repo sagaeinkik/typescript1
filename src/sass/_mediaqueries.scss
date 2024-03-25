@@ -1,0 +1,66 @@
+// Media queries
+@media (max-width: 1500px) {
+    .container p.heading {
+        font-size: 3em;
+    }
+}
+
+@media (max-width: 1100px) {
+    .container .icon {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #leftside .content {
+        width: 80%;
+        form {
+            font-size: 0.9em;
+            input:not(input.btn) {
+                padding: 0.5em 0.5em 0.4em 0.5em;
+            }
+        }
+    }
+    #rightside .content {
+        width: 80%;
+
+        .courselist {
+            max-height: 700px;
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    #rightside {
+        border-radius: 0 0 40px 40px;
+    }
+    #leftside .content form {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 450px) {
+    .container {
+        width: 95%;
+        margin: 6em auto 2em;
+    }
+    .container p.heading {
+        font-size: 2em;
+    }
+    p.credits {
+        writing-mode: initial;
+        position: static;
+        width: fit-content;
+        margin: auto;
+    }
+    #rightside .content {
+        min-height: initial;
+        height: 500px;
+
+        .courselist {
+            max-height: 400px;
+        }
+    }
+}

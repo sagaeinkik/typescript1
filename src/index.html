@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moment 1 | TypeScript</title>
     <link rel="stylesheet" href="sass/main.scss">
+    <script src="js/main.ts" type="module"></script>
 </head>
 
 <body>
@@ -20,15 +21,15 @@
                     <div class="content">
 
                         <p class="heading addcourse">Lägg till kurs</p>
-                        <form>
-                            <label for="kurskod">Kurskod:</label>
-                            <input type="text" name="kurskod" id="kurskod">
-                            <label for="kursnamn">Kursnamn:</label>
-                            <input type="text" name="kursnamn" id="kursnamn">
-                            <label for="progression">Progression:</label>
-                            <input type="text" name="progression" id="progression">
-                            <label for="kursplan">Kursplan:</label>
-                            <input type="text" name="kursplan" id="kursplan">
+                        <form autocomplete="off">
+                            <label for="kurskod">Kurskod:</label><span class="error" id="error1"></span>
+                            <input type="text" name="kurskod" id="kurskod" required>
+                            <label for="kursnamn">Kursnamn:</label><span class="error" id="error2"></span>
+                            <input type="text" name="kursnamn" id="kursnamn" required>
+                            <label for="progression">Progression:</label><span class="error" id="error3"></span>
+                            <input type="text" name="progression" id="progression" required>
+                            <label for="kursplan">Kursplan:</label><span class="error" id="error4"></span>
+                            <input type="text" name="kursplan" id="kursplan" required>
                             <div class="formbuttons">
                                 <input type="submit" class="btn" value="Spara kurs">
                                 <input type="reset" class="btn" value="Börja om">
@@ -38,70 +39,8 @@
                 </div> <!-- slut på leftside -->
                 <div id="rightside">
                     <div class="content">
-
                         <p class="heading courses">Kurser</p>
                         <div class="courselist">
-
-                            <div class="course">
-                                <p>DT211G</p>
-                                <p>Frontendbaserad webbutveckling
-                                </p>
-                                <p>Progression B</p>
-                                <a href="#">Kursplan här</a>
-                                <div class="controls">
-                                    <button class="change">Ändra kurs</button>
-                                    <button class="delete">Ta bort</button>
-                                </div> <!-- slut på controls -->
-                                <span class="divider"></span>
-                            </div> <!-- slut på kurspost -->
-                            <div class="course">
-                                <p>DT211G</p>
-                                <p>Frontendbaserad webbutveckling
-                                </p>
-                                <p>Progression B</p>
-                                <a href="#">Kursplan här</a>
-                                <div class="controls">
-                                    <button class="change">Ändra kurs</button>
-                                    <button class="delete">Ta bort</button>
-                                </div> <!-- slut på controls -->
-                                <span class="divider"></span>
-                            </div> <!-- slut på kurspost -->
-                            <div class="course">
-                                <p>DT211G</p>
-                                <p>Frontendbaserad webbutveckling
-                                </p>
-                                <p>Progression B</p>
-                                <a href="#">Kursplan här</a>
-                                <div class="controls">
-                                    <button class="change">Ändra kurs</button>
-                                    <button class="delete">Ta bort</button>
-                                </div> <!-- slut på controls -->
-                                <span class="divider"></span>
-                            </div> <!-- slut på kurspost -->
-                            <div class="course">
-                                <p>DT211G</p>
-                                <p>Frontendbaserad webbutveckling
-                                </p>
-                                <p>Progression B</p>
-                                <a href="#">Kursplan här</a>
-                                <div class="controls">
-                                    <button class="change">Ändra kurs</button>
-                                    <button class="delete">Ta bort</button>
-                                </div> <!-- slut på controls -->
-                                <span class="divider"></span>
-                            </div> <!-- slut på kurspost -->
-                            <div class="course">
-                                <p>DT211G</p>
-                                <p>Frontendbaserad webbutveckling
-                                </p>
-                                <p>Progression B</p>
-                                <a href="#">Kursplan här</a>
-                                <div class="controls">
-                                    <button class="change">Ändra kurs</button>
-                                    <button class="delete">Ta bort</button>
-                                </div> <!-- slut på controls -->
-                                <span class="divider"></span>
-                            </div> <!-- slut på kurspost -->
                         </div> <!-- slut på courselist -->
                     </div> <!-- slut på conten -->
                 </div> <!-- slut på rightside -->
